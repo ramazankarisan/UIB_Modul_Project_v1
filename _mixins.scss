@@ -1,0 +1,19 @@
+@mixin hover1 {
+  border-bottom: 3px solid darkblue;
+  background: lightblue;
+}
+@mixin boldIt {
+  font-weight: 800;
+}
+@mixin borderIt($w: 3px, $s: solid, $clr: black) {
+  border: $w $s $clr;
+}
+@mixin centerIt($justify: center, $align: center, $dir: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $dir;
+}
+@mixin animation-progress {
+  animation: animation-progress 2s ease;
+}

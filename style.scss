@@ -1,0 +1,90 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+body {
+  font-family: map-get($fonts, main);
+}
+
+// Offcanvas Navbar
+
+.offcanvas-body {
+  .nav-item {
+    &:hover {
+      @include hover1;
+    }
+  }
+}
+// banner
+
+.banner {
+  img {
+    height: 600px;
+    object-fit: cover;
+    object-position: top;
+  }
+  .card-img-overlay {
+    .card-title {
+      @include boldIt;
+      font-size: 3.5rem;
+      &:nth-of-type(1) {
+        color: #e3f2fd;
+      }
+    }
+  }
+}
+
+.fa-angle-double-down {
+  margin-top: 20px;
+  color: #e3f2fd;
+  transition: transform 1s linear;
+  &:hover {
+    transform: scale(1.2);
+    color: rgb(250, 79, 27);
+  }
+}
+
+// about section
+.aboutme {
+  .personal-data {
+    @include borderIt;
+  }
+  .skills {
+    @include borderIt;
+  }
+}
+.card-body {
+  .btn {
+    @include centerIt;
+    @include boldIt;
+    &:hover {
+      background: #e3f2fd;
+      color: darkblue;
+    }
+  }
+}
+.skills {
+  h2 {
+    @include boldIt;
+  }
+  &-item {
+    @include boldIt;
+    font-size: 2rem;
+  }
+  .progress {
+    margin: 10px 0;
+    height: 30px;
+    font-size: 1.5rem;
+    .progress-bar {
+      @include centerIt($justify: flex-end);
+      @include animation-progress;
+    }
+  }
+}
+@keyframes animation-progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
