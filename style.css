@@ -14,6 +14,19 @@ body {
   font-family: "Comic Neue";
 }
 
+.navbar {
+  background: #334d66 !important;
+}
+
+.offcanvas-body {
+  background: #334d66;
+}
+
+.offcanvas-body .nav-item a {
+  font-size: 1.5rem;
+  color: white !important;
+}
+
 .offcanvas-body .nav-item:hover {
   border-bottom: 3px solid darkblue;
   background: lightblue;
@@ -25,6 +38,8 @@ body {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+  -webkit-box-shadow: 0px 10px 20px #334d66, -10px 0px 20px #334d66;
+          box-shadow: 0px 10px 20px #334d66, -10px 0px 20px #334d66;
 }
 
 .banner .card-img-overlay .card-title {
@@ -38,6 +53,7 @@ body {
 
 .fa-angle-double-down {
   margin-top: 20px;
+  padding-top: 50px;
   color: #e3f2fd;
   -webkit-transition: -webkit-transform 1s linear;
   transition: -webkit-transform 1s linear;
@@ -46,20 +62,61 @@ body {
 }
 
 .fa-angle-double-down:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
   color: #fa4f1b;
 }
 
+.aboutme {
+  background: #334d66;
+}
+
+.aboutme p,
+.aboutme h5,
+.aboutme h1 {
+  color: white;
+}
+
 .aboutme .personal-data {
-  border: 3px solid black;
+  border: 3px solid #ff4136;
+  background: #334d66;
+}
+
+.aboutme .personal-data h1::after {
+  content: "";
+  height: 5px;
+  width: 60px;
+  background: #ff4136;
+  display: block;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  margin: 5px 0;
 }
 
 .aboutme .skills {
-  border: 3px solid black;
+  border: 3px solid #ff4136;
+}
+
+.card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .card-body .btn {
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,8 +134,8 @@ body {
 }
 
 .card-body .btn:hover {
-  background: #e3f2fd;
-  color: darkblue;
+  background: #ff4136;
+  color: white;
 }
 
 .skills h2 {
@@ -87,16 +144,19 @@ body {
 
 .skills-item {
   font-weight: 800;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .skills .progress {
   margin: 10px 0;
-  height: 30px;
-  font-size: 1.5rem;
+  height: 20px;
+  font-size: 1.2rem;
 }
 
 .skills .progress .progress-bar {
+  padding-right: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,16 +170,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-animation: animation-progress 2s ease;
-          animation: animation-progress 2s ease;
+  -webkit-animation: animation-progress 5s ease-out forwards;
+          animation: animation-progress 5s ease-out forwards;
 }
 
 @-webkit-keyframes animation-progress {
   0% {
     width: 0%;
-  }
-  100% {
-    width: 100%;
   }
 }
 
@@ -127,8 +184,44 @@ body {
   0% {
     width: 0%;
   }
-  100% {
-    width: 100%;
-  }
+}
+
+.services-item, .item2 {
+  border: 3px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services-item .services, .item2 .services {
+  font-size: 1.3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.services-item .services .fa-heart, .item2 .services .fa-heart {
+  font-size: 2rem;
+  margin-right: 20px;
 }
 /*# sourceMappingURL=style.css.map */

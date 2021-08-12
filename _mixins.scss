@@ -14,6 +14,13 @@
   align-items: $align;
   flex-direction: $dir;
 }
-@mixin animation-progress {
-  animation: animation-progress 2s ease;
+@mixin animation-progress($second: 5s) {
+  animation: animation-progress $second ease-out forwards;
+}
+@mixin keyframes {
+  @keyframes animation-progress {
+    0% {
+      width: 0%;
+    }
+  }
 }
