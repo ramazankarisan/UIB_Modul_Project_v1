@@ -43,59 +43,39 @@ body {
 }
 
 .banner .card-img-overlay .card-title {
-  font-weight: 800;
+  font-weight: 900;
   font-size: 3.5rem;
 }
 
 .banner .card-img-overlay .card-title:nth-of-type(1) {
   color: #e3f2fd;
-  -webkit-animation: enterAnimation 5s ease-out;
-          animation: enterAnimation 5s ease-out;
+  -webkit-animation: enterAnimation 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: enterAnimation 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @-webkit-keyframes enterAnimation {
   0% {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-  25% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  50% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-  75% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    -webkit-transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+            transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
   }
 }
 
 @keyframes enterAnimation {
   0% {
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
-  }
-  25% {
-    -webkit-transform: rotate(-20deg);
-            transform: rotate(-20deg);
-  }
-  50% {
-    -webkit-transform: rotate(10deg);
-            transform: rotate(10deg);
-  }
-  75% {
-    -webkit-transform: rotate(-10deg);
-            transform: rotate(-10deg);
+    -webkit-transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+            transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotateX(0deg) translateX(0) skewX(0deg);
+            transform: rotateX(0deg) translateX(0) skewX(0deg);
+    opacity: 1;
   }
 }
 
@@ -103,30 +83,40 @@ body {
   margin-top: 20px;
   padding-top: 50px;
   color: #e3f2fd;
-  -webkit-transition: -webkit-transform 1s linear;
-  transition: -webkit-transform 1s linear;
-  transition: transform 1s linear;
-  transition: transform 1s linear, -webkit-transform 1s linear;
+  -webkit-animation: upanddown 2s linear infinite;
+          animation: upanddown 2s linear infinite;
+  color: #fb3d03;
 }
 
-.fa-angle-double-down:hover {
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  color: #fa4f1b;
+@-webkit-keyframes upanddown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes upanddown {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
 }
 
 .aboutme {
   background: #334d66;
-}
-
-.aboutme p,
-.aboutme h5,
-.aboutme h1 {
   color: white;
 }
 
 .aboutme .personal-data {
-  border: 3px solid #ff4136;
+  border: 3px solid #e09224;
   background: #334d66;
 }
 
@@ -134,7 +124,7 @@ body {
   content: "";
   height: 5px;
   width: 15%;
-  background: #ff4136;
+  background: #e09224;
   display: block;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
@@ -159,6 +149,10 @@ body {
           flex-direction: column;
 }
 
+.aboutme .personal-data .card-body h5 {
+  color: #e09224;
+}
+
 .aboutme .personal-data .card-body .btn {
   width: 150px;
   display: -webkit-box;
@@ -174,27 +168,27 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .aboutme .personal-data .card-body .btn:hover {
-  background: #ff4136;
+  background: #e09224;
   color: white;
 }
 
 .aboutme .skills {
-  border: 3px solid #ff4136;
+  border: 3px solid #e09224;
 }
 
 .aboutme .skills h2 {
-  font-weight: 800;
+  font-weight: 900;
 }
 
 .aboutme .skills h2::after {
   content: "";
   height: 5px;
   width: 15%;
-  background: #ff4136;
+  background: #e09224;
   display: block;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
@@ -204,7 +198,7 @@ body {
 }
 
 .aboutme .skills-item {
-  font-weight: 800;
+  font-weight: 900;
   font-size: 1.5rem;
 }
 
@@ -233,6 +227,7 @@ body {
           flex-direction: row;
   -webkit-animation: animation-progress 5s ease-out forwards;
           animation: animation-progress 5s ease-out forwards;
+  background: #e09224;
 }
 
 @-webkit-keyframes animation-progress {
@@ -357,5 +352,169 @@ body {
 .carousel-inner img {
   width: 150px;
   height: 150px;
+}
+
+.contact-container {
+  background: #334d66;
+}
+
+.contact-container h1::after {
+  content: "";
+  height: 5px;
+  width: 15%;
+  background: #e09224;
+  display: block;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  margin: 10px 0;
+}
+
+.contact-form {
+  font-size: 1.2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  margin: 5px 0px;
+  padding-left: 10px;
+  border-radius: 10px;
+  outline: 0px;
+  border: 2px solid #334d66;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #e09224;
+}
+
+.contact-form input,
+.contact-form label {
+  margin: 5px 0px;
+  display: block;
+  font-weight: 900;
+  color: #e09224;
+}
+
+.contact-form input[type="submit"]:hover {
+  color: white;
+  background: #e09224;
+}
+
+.contact-info {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-info h3::after {
+  content: "";
+  height: 5px;
+  width: 20%;
+  background: #e09224;
+  display: block;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  margin: 10px 0;
+}
+
+.contact-info p {
+  display: inline-block;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+  vertical-align: middle;
+}
+
+.contact-info div {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  margin: 10px 0px;
+}
+
+.contact-info div:hover i {
+  text-shadow: 2px 2px 10px white, -1px -1px 10px white;
+}
+
+.contact-info div p {
+  width: 70%;
+  font-size: 1.3rem;
+}
+
+footer {
+  background: lightgray;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 900;
+}
+
+footer div i {
+  margin: 0px 10px;
+  font-size: 2rem;
+  -webkit-transition: -webkit-transform 1s linear;
+  transition: -webkit-transform 1s linear;
+  transition: transform 1s linear;
+  transition: transform 1s linear, -webkit-transform 1s linear;
+}
+
+footer div .fa-linkedin:hover,
+footer div .fa-twitter:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  color: blue;
+  text-shadow: 2px 2px 10px white, -1px -1px 10px white;
+}
+
+footer div .fa-github:hover,
+footer div .fa-facebook-f:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #e09224;
+  text-shadow: 2px 2px 10px white, -1px -1px 10px white;
 }
 /*# sourceMappingURL=style.css.map */
