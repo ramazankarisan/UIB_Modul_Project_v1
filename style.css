@@ -316,4 +316,46 @@ body {
   transition: transform 0.6s linear, -webkit-transform 0.6s linear;
   color: #334d66;
 }
+
+.clients {
+  background: lightgray;
+}
+
+.clients h1 {
+  color: #e09224;
+}
+
+.clients h1::after {
+  content: "";
+  height: 5px;
+  width: 20%;
+  background: #334d66;
+  display: block;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+  margin: 10px 0;
+}
+
+.carousel-inner {
+  color: black;
+  width: 100%;
+  height: 400px;
+  background: lightgray;
+}
+
+.carousel-inner .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-inner .carousel-item .carousel-caption {
+  color: #334d66;
+}
+
+.carousel-inner img {
+  width: 150px;
+  height: 150px;
+}
 /*# sourceMappingURL=style.css.map */

@@ -140,3 +140,31 @@ body {
     }
   }
 }
+
+// clients section
+.clients {
+  background: lightgray;
+  h1 {
+    color: #e09224;
+    &::after {
+      @include underline($width: 20%, $color: #334d66);
+    }
+  }
+}
+.carousel-inner {
+  color: black;
+  width: 100%;
+  height: 400px;
+  background: lightgray;
+  .carousel-item {
+    width: 100%;
+    height: 100%;
+    .carousel-caption {
+      color: #334d66;
+    }
+  }
+  img {
+    width: 150px;
+    height: 150px;
+  }
+}
