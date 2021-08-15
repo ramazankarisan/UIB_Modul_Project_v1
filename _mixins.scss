@@ -79,7 +79,7 @@
   font-size: 2rem;
 }
 @mixin overlayenter {
-  animation: overlayenter 1.2s linear;
+  animation: overlayenter 0.7s linear;
   @keyframes overlayenter {
     0% {
       opacity: 0;
@@ -98,7 +98,7 @@
   left: 0%;
 }
 @mixin work-name-enter {
-  animation: work-name-enter 1.2s ease-out;
+  animation: work-name-enter 0.7s ease-out;
   @keyframes work-name-enter {
     0% {
       opacity: 0;

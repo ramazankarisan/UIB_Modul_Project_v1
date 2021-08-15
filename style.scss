@@ -116,7 +116,7 @@ body {
         background: #e09224;
       }
     }
-    @media screen and (min-width: 1400px) {
+    @media screen and (min-width: 1200px) {
       height: 95%;
       h2 {
         transform: translateY(-60px);
@@ -365,7 +365,7 @@ body {
 // footer
 footer {
   background: lightgray;
-  height: 80px;
+  height: 90px;
   @include centerIt($dir: column, $justify: space-between);
   @include boldIt;
   div {
