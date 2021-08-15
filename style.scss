@@ -388,3 +388,35 @@ footer {
     }
   }
 }
+
+// top button
+
+.top-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(8, 8, 8, 0.5);
+  color: white;
+
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  transition: transform 0.5s linear;
+  &:hover {
+    transform: rotate(360deg);
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    @include centerIt($dir: column);
+
+    i {
+      margin-top: 5px;
+      font-size: 1.3rem;
+    }
+    p {
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+  }
+}
