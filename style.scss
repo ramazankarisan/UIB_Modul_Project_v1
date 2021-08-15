@@ -31,14 +31,13 @@ body {
     height: 600px;
     object-fit: cover;
     object-position: top;
-    box-shadow: 0px 10px 20px #334d66, -10px 0px 20px #334d66;
   }
   .card-img-overlay {
     .card-title {
       @include boldIt;
       font-size: 3.5rem;
       &:nth-of-type(1) {
-        color: #e3f2fd;
+        color: white;
         @include enterAnimation;
       }
     }
@@ -149,6 +148,9 @@ body {
               height: 86%;
             }
             .progress-bar {
+              border-top-right-radius: 8px;
+              border-top-left-radius: 8px;
+              border-bottom-right-radius: 0;
               padding-left: 5px;
               padding-top: 10px;
               @include progressvertical;
@@ -353,11 +355,10 @@ body {
     &:hover i {
       text-shadow: 2px 2px 10px white, -1px -1px 10px white;
     }
-
-    p {
-      width: 70%;
-      font-size: 1.3rem;
-    }
+  }
+  p {
+    width: 50%;
+    font-size: 1.3rem;
   }
 }
 
@@ -371,7 +372,7 @@ footer {
     i {
       margin: 0px 10px;
       font-size: 2rem;
-      transition: transform 1s linear;
+      transition: transform 0.4s linear;
     }
     .fa-linkedin:hover,
     .fa-twitter:hover {
