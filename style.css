@@ -275,7 +275,7 @@ body {
   }
   .aboutme .skills .skills-container {
     height: 70%;
-    width: 90%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -291,7 +291,6 @@ body {
             flex-direction: row;
   }
   .aboutme .skills .skills-container .skills-item {
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

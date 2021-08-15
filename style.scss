@@ -124,10 +124,9 @@ body {
       @include centerIt($dir: column, $justify: space-around);
       .skills-container {
         height: 70%;
-        width: 90%;
+        width: 100%;
         @include centerIt($justify: center);
         .skills-item {
-          width: 100%;
           @include centerIt($dir: column);
           margin: 0 10px;
           .progress {
