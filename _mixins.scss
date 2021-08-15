@@ -22,6 +22,14 @@
     }
   }
 }
+@mixin progressvertical($second: 5s) {
+  animation: progressvertical $second ease-out forwards;
+  @keyframes progressvertical {
+    0% {
+      height: 0%;
+    }
+  }
+}
 @mixin upanddown {
   animation: upanddown 2s linear infinite;
   @keyframes upanddown {
@@ -51,7 +59,7 @@
 }
 
 @mixin enterAnimation {
-  animation: enterAnimation 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: enterAnimation 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   @keyframes enterAnimation {
     0% {
       transform: rotateX(-30deg) translateX(-300px) skewX(-30deg);
@@ -62,4 +70,51 @@
       opacity: 1;
     }
   }
+}
+@mixin textoverlay {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  color: white;
+  font-size: 2rem;
+}
+@mixin overlayenter {
+  animation: overlayenter 1.2s linear;
+  @keyframes overlayenter {
+    0% {
+      opacity: 0;
+      transform: translatex(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translatex(0);
+    }
+  }
+}
+@mixin work-name-overlay {
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  left: 0%;
+}
+@mixin work-name-enter {
+  animation: work-name-enter 1.2s ease-out;
+  @keyframes work-name-enter {
+    0% {
+      opacity: 0;
+      transform: translatey(30px);
+    }
+    60% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 0.7;
+      transform: translatex(0);
+    }
+  }
+}
+
+@mixin background($url: "./images/project-photos/project-photo1.jpg") {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url($url) no-repeat center center / cover;
 }

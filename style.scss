@@ -8,7 +8,10 @@ body {
 // Offcanvas Navbar
 .navbar {
   background: #334d66 !important;
+
+  border-bottom: 3px solid #e3f2fd;
 }
+
 .offcanvas-body {
   background: #334d66;
   .nav-item {
@@ -40,6 +43,12 @@ body {
       }
     }
   }
+  @media screen and (min-width: 1200px) {
+    height: 100vh;
+    img {
+      height: 100%;
+    }
+  }
 }
 
 .fa-angle-double-down {
@@ -47,7 +56,7 @@ body {
   padding-top: 50px;
   color: #e3f2fd;
   @include upanddown;
-  color: rgb(251, 61, 3);
+  color: #e3f2fd;
 }
 
 // about section
@@ -85,12 +94,13 @@ body {
     h2 {
       @include boldIt;
       &::after {
-        @include underline($width: 15%);
+        @include underline($width: 50px);
       }
     }
     &-item {
       @include boldIt;
       font-size: 1.5rem;
+      padding: 10px;
     }
     .progress {
       margin: 10px 0;
@@ -104,6 +114,49 @@ body {
         @include centerIt($justify: flex-end);
         @include animation-progress;
         background: #e09224;
+      }
+    }
+    @media screen and (min-width: 1400px) {
+      height: 95%;
+      h2 {
+        transform: translateY(-60px);
+      }
+      @include centerIt($dir: column, $justify: space-around);
+      .skills-container {
+        height: 70%;
+        width: 90%;
+        @include centerIt($justify: center);
+        .skills-item {
+          width: 100%;
+          @include centerIt($dir: column);
+          margin: 0 10px;
+          .progress {
+            @include centerIt($align: flex-end);
+            height: 60vh;
+            .bar1 {
+              width: 100% !important;
+              height: 80%;
+            }
+            .bar2 {
+              @extend .bar1;
+              height: 95%;
+            }
+            .bar3 {
+              @extend .bar1;
+              height: 88%;
+            }
+            .bar4 {
+              @extend .bar1;
+              height: 86%;
+            }
+            .progress-bar {
+              padding-left: 5px;
+              padding-top: 10px;
+              @include progressvertical;
+              @include centerIt($justify: flex-start, $dir: column);
+            }
+          }
+        }
       }
     }
   }
@@ -137,6 +190,79 @@ body {
       transition: transform 0.6s linear;
       color: map-get($colors, aboutme);
     }
+  }
+}
+// latest works
+.works-container {
+  background: #334d66;
+  h2::after {
+    @include underline($color: #e09224, $width: 20%);
+  }
+}
+.work1 {
+  background: url(./images/project-photos/project-photo1.jpg) no-repeat center
+    center / cover;
+  height: 300px;
+}
+
+.work1 {
+  margin: 20px 0;
+
+  &:hover i {
+    display: block;
+    @include overlayenter;
+  }
+  &:hover .work-name {
+    @include work-name-enter;
+    display: block;
+  }
+  &:hover {
+    @include background;
+  }
+
+  i {
+    @include textoverlay;
+    display: none;
+    &:hover {
+      text-shadow: 2px 2px 10px white, -1px -1px 10px white;
+      cursor: pointer;
+    }
+  }
+  .work-name {
+    background: white;
+    padding: 5px;
+    height: 30px;
+    text-align: center;
+    @include work-name-overlay;
+    display: none;
+  }
+}
+
+.work2 {
+  background: url(./images/project-photos/project-photo2.jpg) no-repeat center
+    center / cover;
+  height: 300px;
+  @extend .work1;
+  &:hover {
+    @include background($url: "./images/project-photos/project-photo2.jpg");
+  }
+}
+.work3 {
+  background: url(./images/project-photos/project-photo3.jpg) no-repeat center
+    center / cover;
+  height: 300px;
+  @extend .work2;
+  &:hover {
+    @include background($url: "./images/project-photos/project-photo3.jpg");
+  }
+}
+.work4 {
+  background: url(./images/project-photos/project-photo4.jpg) no-repeat center
+    center / cover;
+  height: 300px;
+  @extend .work3;
+  &:hover {
+    @include background($url: "./images/project-photos/project-photo4.jpg");
   }
 }
 

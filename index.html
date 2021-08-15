@@ -28,14 +28,15 @@
       class="navbar navbar-light navbar-expand-lg fixed-top"
       style="background-color: #e3f2fd"
     >
-      <div class="container-fluid">
+      <div class="container-fluid main-navbar">
         <a href="#nav"
           ><img
             src="./images/RK.png"
             style="width: 80px; border-radius: 50%"
             alt="logo photo of my initials"
+            class="logo"
         /></a>
-        <!-- <h5 class="mx-lg-4">Ramazan Karisan, Web Developer</h5> -->
+        <h1 class="text-white fw-bold fs-1 mx-lg-5">Web Services</h1>
         <button
           class="navbar-toggler bg-light"
           type="button"
@@ -67,25 +68,27 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="#home"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#about"
                   >About</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#works"
                   >Works</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#contact"
                   >Hire me</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="#contact"
                   >Contact</a
                 >
               </li>
@@ -95,7 +98,7 @@
       </div>
     </nav>
     <!--    banner     -->
-    <div class="banner card text-white">
+    <div class="banner card text-white" id="home">
       <img
         src="./images/banner.jpg"
         class="card-img img-fluid"
@@ -122,84 +125,106 @@
     <div class="aboutme container-fluid">
       <div class="container">
         <div class="row d-flex justify-content-center">
-          <div class="card personal-data my-4 position-relative">
-            <h1 class="text-center my-2 fw-bold fs-1">About me</h1>
-            <img
-              src="./images/profile-pic.jpg"
-              class="card-img-top rounded-circle my-4"
-              alt="..."
-              id="about"
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center fw-bold fs-2">
-                Ramazan Karisan
-              </h5>
-              <p class="card-text text-justify fs-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro,
-                dolorem architecto! Facere, illum saepe architecto dignissimos
-                dolore animi temporibus atque ipsum voluptas rem cupiditate
-                sapiente. Et, unde ipsa! Ea, voluptatem. Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Provident obcaecati ratione
-                porro et, non quo asperiores aliquid atque? Nihil in, atque
-                dignissimos nulla deleniti similique optio assumenda earum illum
-                inventore.
-              </p>
-              <a href="#contact" class="btn btn-light fs-4">Hire me</a>
+          <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+            <div class="card personal-data my-4 position-relative">
+              <h1 class="text-center my-2 fw-bold fs-1">About me</h1>
+              <img
+                src="./images/profile-pic.jpg"
+                class="card-img-top rounded-circle my-4"
+                alt="..."
+                id="about"
+              />
+              <div class="card-body">
+                <h5 class="card-title text-center fw-bold fs-2">
+                  Ramazan Karisan
+                </h5>
+                <p class="card-text text-justify fs-4">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Porro, dolorem architecto! Facere, illum saepe architecto
+                  dignissimos dolore animi temporibus atque ipsum voluptas rem
+                  cupiditate sapiente. Et, unde ipsa! Ea, voluptatem. Lorem
+                  ipsum dolor sit amet consectetur adipisicing elit. Provident
+                  obcaecati ratione porro et, non quo asperiores aliquid atque?
+                  Nihil in, atque dignissimos nulla deleniti similique optio
+                  assumenda earum illum inventore.
+                </p>
+                <a href="#contact" class="btn btn-light fs-4">Hire me</a>
+              </div>
             </div>
           </div>
-          <div class="skills my-3">
-            <h2 class="text-white text-center my-5 fs-1">My Skills</h2>
-            <p class="skills-item">Photoshop</p>
-            <div class="progress position-relative">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 80%"
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
+          <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+            <div class="skills my-4">
+              <h2
+                class="
+                  text-white text-center
+                  my-5 my-xl-2
+                  fs-1
+                  position-relative
+                "
               >
-                80%
-              </div>
-            </div>
-
-            <p class="skills-item">Html-Css</p>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 95%"
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                95%
-              </div>
-            </div>
-            <p class="skills-item">JavaScript</p>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 88%"
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                88%
-              </div>
-            </div>
-            <p class="skills-item">PHP</p>
-            <div class="progress">
-              <div
-                class="progress-bar"
-                role="progressbar"
-                style="width: 86%"
-                aria-valuenow="100"
-                aria-valuemin="0"
-                aria-valuemax="100"
-              >
-                86%
+                My Skills
+              </h2>
+              <div class="skills-container">
+                <div class="skills-item">
+                  <p class="skills-name">Photoshop</p>
+                  <div class="progress position-relative">
+                    <div
+                      class="progress-bar bar1"
+                      role="progressbar"
+                      style="width: 80%"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      80%
+                    </div>
+                  </div>
+                </div>
+                <div class="skills-item">
+                  <p class="skills-name">Html-Css</p>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bar2"
+                      role="progressbar"
+                      style="width: 95%"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      95%
+                    </div>
+                  </div>
+                </div>
+                <div class="skills-item">
+                  <p class="skills-name">JavaScript</p>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bar3"
+                      role="progressbar"
+                      style="width: 88%"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      88%
+                    </div>
+                  </div>
+                </div>
+                <div class="skills-item">
+                  <p class="skills-name">PHP</p>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bar4"
+                      role="progressbar"
+                      style="width: 86%"
+                      aria-valuenow="100"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    >
+                      86%
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -209,7 +234,7 @@
     <!--    services     -->
 
     <div class="services-container py-4 container-fluid">
-      <div class="container">
+      <div class="row container mx-auto">
         <div class="services-header">
           <h1 class="text-center fw-bold">AN OVERVIEW OF MY SERVICES</h1>
           <p class="text-center my-4">
@@ -218,74 +243,114 @@
           </p>
         </div>
         <div class="row services-items p-4">
-          <div class="services-item item1 my-3 col-12">
-            <div class="services col-8">
-              <i class="fas fa-star"></i>
-              <div class="services-name py-4">
-                <p class="fw-bold fs-2">Premium Quality</p>
-                <p>Lorem, ipsum dolor</p>
+          <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+            <div class="services-item item1 my-3">
+              <div class="services col-8">
+                <i class="fas fa-star"></i>
+                <div class="services-name py-4">
+                  <p class="fw-bold fs-2">Premium Quality</p>
+                  <p>Lorem, ipsum dolor</p>
+                </div>
               </div>
-            </div>
-            <div class="col-8">
-              <p class="fs-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum,
-                odit amet maxime nulla ipsum explicabo quasi laborum nesciunt.
-                Id, repellat.
-              </p>
+              <div class="col-8">
+                <p class="fs-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Earum, odit amet maxime nulla ipsum explicabo quasi laborum
+                  nesciunt. Id, repellat.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="services-item item2 my-2 col-12">
-            <div class="services col-8">
-              <i class="fas fa-cloud-upload-alt"></i>
-              <div class="services-name py-4">
-                <p class="fw-bold fs-2">Cloud Services</p>
-                <p>Lorem, ipsum dolor</p>
+          <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+            <div class="services-item item2 my-3">
+              <div class="services col-8">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <div class="services-name py-4">
+                  <p class="fw-bold fs-2">Cloud Services</p>
+                  <p>Lorem, ipsum dolor</p>
+                </div>
               </div>
-            </div>
-            <div class="col-8">
-              <p class="fs-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum,
-                odit amet maxime nulla ipsum explicabo quasi laborum nesciunt.
-                Id, repellat.
-              </p>
+              <div class="col-8">
+                <p class="fs-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Earum, odit amet maxime nulla ipsum explicabo quasi laborum
+                  nesciunt. Id, repellat.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="services-item item3 my-2 col-12">
-            <div class="services col-8">
-              <i class="fas fa-shield-alt"></i>
-              <div class="services-name py-4">
-                <p class="fw-bold fs-3">Secured Accounts</p>
-                <p>Lorem, ipsum dolor</p>
+          <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+            <div class="services-item item3 my-3">
+              <div class="services col-8">
+                <i class="fas fa-shield-alt"></i>
+                <div class="services-name py-4">
+                  <p class="fw-bold fs-3">Secured Accounts</p>
+                  <p>Lorem, ipsum dolor</p>
+                </div>
               </div>
-            </div>
-            <div class="col-8">
-              <p class="fs-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum,
-                odit amet maxime nulla ipsum explicabo quasi laborum nesciunt.
-                Id, repellat.
-              </p>
+              <div class="col-8">
+                <p class="fs-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Earum, odit amet maxime nulla ipsum explicabo quasi laborum
+                  nesciunt. Id, repellat.
+                </p>
+              </div>
             </div>
           </div>
-          <div class="services-item item3 my-2 col-12">
-            <div class="services col-8">
-              <i class="fas fa-heart"></i>
-              <div class="services-name py-4">
-                <p class="fw-bold fs-2">100% Satisfaction</p>
-                <p>Lorem, ipsum dolor</p>
+          <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+            <div class="services-item item4 my-3">
+              <div class="services col-8">
+                <i class="fas fa-heart"></i>
+                <div class="services-name py-4">
+                  <p class="fw-bold fs-2">100% Satisfaction</p>
+                  <p>Lorem, ipsum dolor</p>
+                </div>
               </div>
-            </div>
-            <div class="col-8">
-              <p class="fs-5">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum,
-                odit amet maxime nulla ipsum explicabo quasi laborum nesciunt.
-                Id, repellat.
-              </p>
+              <div class="col-8">
+                <p class="fs-5">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Earum, odit amet maxime nulla ipsum explicabo quasi laborum
+                  nesciunt. Id, repellat.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Latest works -->
 
+    <div class="container-fluid works-container">
+      <div class="container row mx-auto works-inner-container">
+        <h2 class="text-center text-white my-4 fs-1 fw-bold" id="works">
+          Some of my latest works
+        </h2>
+        <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+          <div class="works-item work1 position-relative">
+            <i class="fas fa-search"></i>
+            <div class="work-name">lorem ipsum</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+          <div class="works-item work2 position-relative">
+            <i class="fas fa-search"></i>
+            <div class="work-name">lorem ipsum</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+          <div class="works-item work3 position-relative">
+            <i class="fas fa-search"></i>
+            <div class="work-name">lorem ipsum</div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+          <div class="works-item work4 position-relative">
+            <i class="fas fa-search"></i>
+            <div class="work-name">lorem ipsum</div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Clients section -->
     <div class="container-fluid clients">
       <div
@@ -352,57 +417,63 @@
     <!-- contact section -->
     <div class="container-fluid contact-container">
       <div class="container mx-auto row contact-inner-container">
-        <h1 class="text-center fw-bold my-3 text-white">Get in Touch</h1>
+        <h1 class="text-center fw-bold my-3 text-white position-relative">
+          Get in Touch
+        </h1>
         <p class="fs-5 text-center text-white my-3">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil,
           possimus.
         </p>
 
-        <div class="contact-form col-12">
-          <form action="">
-            <label for="name">Your Name</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="enter a name"
-            />
-            <label for="email">Your Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="enter an email"
-            />
-            <label for="message">Your Message</label>
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="enter your message please…"
-            ></textarea>
-            <input type="submit" value="Send" />
-          </form>
+        <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+          <div class="contact-form col-12" id="contact">
+            <form action="">
+              <label for="name">Your Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="enter a name"
+              />
+              <label for="email">Your Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="enter an email"
+              />
+              <label for="message">Your Message</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                placeholder="enter your message please…"
+              ></textarea>
+              <input class="my-4" type="submit" value="Send" />
+            </form>
+          </div>
         </div>
-        <div class="contact-info">
-          <h3 class="fs-1 my-4">Contact Informations</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam
-            architecto rerum dolor, quaerat velit similique non voluptate
-            voluptates! Porro.
-          </p>
-          <div>
-            <i class="fas fa-map-marked-alt"></i>
-            <p>Hauptstr 999, 11111 Berlin</p>
-          </div>
-          <div>
-            <i class="fas fa-phone-alt"></i>
-            <p>+49 111 1111111</p>
-          </div>
-          <div>
-            <i class="fas fa-envelope-square"></i>
-            <p>info@mail.com</p>
+        <div class="col-12 col-lg-8 mx-lg-auto col-xl-6">
+          <div class="contact-info">
+            <h3 class="fs-1 my-4 position-relative">Contact Informations</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam
+              architecto rerum dolor, quaerat velit similique non voluptate
+              voluptates! Porro.
+            </p>
+            <div>
+              <i class="fas fa-map-marked-alt"></i>
+              <p>Hauptstr 999, 11111 Berlin</p>
+            </div>
+            <div>
+              <i class="fas fa-phone-alt"></i>
+              <p>+49 111 1111111</p>
+            </div>
+            <div>
+              <i class="fas fa-envelope-square"></i>
+              <p>info@mail.com</p>
+            </div>
           </div>
         </div>
       </div>
